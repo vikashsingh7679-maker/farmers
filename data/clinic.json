@@ -1,0 +1,79 @@
+{
+  "clinic": {
+    "id": "aster-eye-institute-pune",
+    "name": "Aster Eye Institute",
+    "location": "Pune, Maharashtra"
+  },
+  "doctors": [
+    {
+      "id": "doc-001",
+      "name": "Dr. Mira Shah",
+      "email": "dr.shah@astereye.in",
+      "password": "aster123",
+      "role": "Ophthalmologist",
+      "clinicId": "aster-eye-institute-pune"
+    }
+  ],
+  "patients": [
+    {
+      "id": "AEI-1042",
+      "name": "Ananya Rao",
+      "age": 34,
+      "sex": "Female",
+      "lastVisit": "2026-09-18",
+      "matchThreshold": 68,
+      "rgbProfile": [[0.12,0.17,0.23,0.2,0.14,0.08,0.04,0.02],[0.08,0.13,0.2,0.24,0.18,0.1,0.05,0.06],[0.05,0.1,0.17,0.22,0.2,0.14,0.07,0.09]],
+      "report": {
+        "visualAcuity": {"right":"6/6","left":"6/9"},
+        "pressure": {"right":15,"left":16},
+        "notes":"Mild refractive error in the left eye. Anterior segment examination unremarkable. Fundus appears healthy.",
+        "plan":"Review refraction and discuss corrective lenses. Routine follow-up in six months, or sooner if symptoms change."
+      }
+    },
+    {
+      "id": "AEI-1087",
+      "name": "Rohan Desai",
+      "age": 52,
+      "sex": "Male",
+      "lastVisit": "2026-09-22",
+      "matchThreshold": 68,
+      "rgbProfile": [[0.08,0.14,0.22,0.24,0.16,0.09,0.04,0.03],[0.06,0.12,0.2,0.25,0.18,0.1,0.05,0.04],[0.04,0.09,0.16,0.23,0.22,0.14,0.07,0.05]],
+      "report": {
+        "visualAcuity": {"right":"6/9","left":"6/9"},
+        "pressure": {"right":17,"left":18},
+        "notes":"Early lens opacity noted bilaterally. Intraocular pressure within expected range at this visit. Patient reports intermittent glare.",
+        "plan":"Monitor lens changes and review in three months. Discuss protective eyewear and return precautions."
+      }
+    },
+    {
+      "id": "AEI-1125",
+      "name": "Priya Kulkarni",
+      "age": 27,
+      "sex": "Female",
+      "lastVisit": "2026-09-24",
+      "matchThreshold": 68,
+      "rgbProfile": [[0.15,0.19,0.21,0.18,0.12,0.08,0.04,0.03],[0.1,0.17,0.22,0.2,0.15,0.08,0.05,0.03],[0.07,0.13,0.2,0.23,0.17,0.11,0.05,0.04]],
+      "report": {
+        "visualAcuity": {"right":"6/6","left":"6/6"},
+        "pressure": {"right":14,"left":14},
+        "notes":"Ocular surface irritation consistent with dry eye symptoms. Visual acuity is stable and ocular health is otherwise unremarkable.",
+        "plan":"Discuss screen breaks and lubricating drops as clinically appropriate. Review if discomfort persists."
+      }
+    },
+    {
+      "id": "AEI-1173",
+      "name": "Vikram Nair",
+      "age": 63,
+      "sex": "Male",
+      "lastVisit": "2026-09-26",
+      "matchThreshold": 68,
+      "rgbProfile": [[0.11,0.16,0.22,0.21,0.14,0.08,0.05,0.03],[0.07,0.12,0.19,0.23,0.18,0.11,0.06,0.04],[0.05,0.1,0.17,0.22,0.2,0.13,0.08,0.05]],
+      "report": {
+        "visualAcuity": {"right":"6/12","left":"6/9"},
+        "pressure": {"right":19,"left":18},
+        "notes":"Stable follow-up examination. Optic disc appearance documented for comparison. No acute symptoms reported.",
+        "plan":"Continue scheduled ophthalmology follow-up and bring current medication list to the next visit."
+      }
+    }
+  ]
+}

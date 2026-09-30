@@ -1,0 +1,7 @@
+{
+  "name": "aster-eye-clinic-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aster Eye Institute doctor dashboard and RGB eye-image matching prototype",
+  "scripts": { "start": "node server.js" }
+}

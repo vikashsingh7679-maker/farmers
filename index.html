@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f8f7"><meta name="description" content="Private patient records and RGB eye image verification for Aster Eye Institute.">
+  <title>Aster Eye Institute — Clinical Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-icon">✳</span><span><b>aster</b><small>EYE INSTITUTE</small></span></a>
+      <div class="clinic-tag"><span class="pulse"></span> PRIVATE CLINIC PORTAL</div>
+      <nav><a class="nav active" href="#dashboard"><span>▦</span> Overview</a><a class="nav" href="#patients"><span>◉</span> Patient records</a><a class="nav" href="#verify"><span>◎</span> Eye verification</a></nav>
+      <div class="side-bottom"><div class="privacy-card"><span class="privacy-icon">⌑</span><b>Clinic only</b><p>Records and enrolled eye profiles are scoped to this hospital.</p><span class="secure-label">● &nbsp;SECURE WORKSPACE</span></div><div class="doctor-profile"><span class="doctor-avatar" id="avatar">D</span><span><b id="doctor-name">Doctor access</b><small id="doctor-role">Sign in to continue</small></span><button id="logout" class="logout hidden">↗</button></div></div>
+    </aside>
+    <section class="main-area">
+      <header class="topbar"><div><span class="crumb">ASTER EYE INSTITUTE</span><span class="crumb-sep">/</span><b id="page-title">Clinical overview</b></div><div class="top-right"><span class="today" id="today"></span><span class="top-avatar">A</span></div></header>
+      <div class="content" id="dashboard">
+        <section class="welcome"><div><span class="eyebrow"><i></i> CLINICAL WORKSPACE</span><h1>Care, clearly in focus.</h1><p>Doctor access, patient reports, and a simple RGB eye-image check in one private clinic portal.</p></div><div class="welcome-symbol"><span>◉</span><small>ASTER<br>OPHTHALMOLOGY</small></div></section>
+        <section class="login-panel" id="login-panel"><div class="panel-heading"><div><span class="eyebrow">DOCTOR SIGN IN</span><h2>Welcome back</h2><p>Use your Aster Eye Institute account to access patient reports.</p></div><span class="lock">⌑</span></div><form id="login-form"><label>Doctor email<input name="email" type="email" placeholder="doctor@astereye.in" required autocomplete="username"></label><label>Password<input name="password" type="password" placeholder="Enter your password" required autocomplete="current-password"></label><button class="primary" type="submit">Sign in to clinic portal <span>→</span></button><div class="login-error" id="login-error" role="alert"></div></form><div class="demo-hint">DEMO ACCESS <span>dr.shah@astereye.in</span><span> / </span><span>aster123</span></div></section>
+        <section class="app-view hidden" id="app-view">
+          <div class="stats"><article><span class="stat-icon blue">◉</span><div><small>REGISTERED PATIENTS</small><b id="patient-count">—</b><em>In this clinic</em></div></article><article><span class="stat-icon green">▤</span><div><small>AVAILABLE REPORTS</small><b id="report-count">—</b><em>Doctor-only access</em></div></article><article><span class="stat-icon amber">◎</span><div><small>EYE CHECK METHOD</small><b>RGB match</b><em>Prototype comparison</em></div></article></div>
+          <div class="work-grid"><section class="card patient-card" id="patients"><div class="card-head"><div><span class="eyebrow">PATIENT DIRECTORY</span><h2>Patient reports</h2><p>View records enrolled at Aster Eye Institute.</p></div><span class="records-pill"><i></i> CLINIC RECORDS</span></div><div class="search-wrap"><span>⌕</span><input id="patient-search" placeholder="Search by patient name or ID" aria-label="Search patients"></div><div class="patient-list" id="patient-list"><div class="loading">Loading clinic records…</div></div><div class="records-foot">Patient data is served from this prototype's local JSON file.</div></section>
+          <section class="card verify-card" id="verify"><div class="card-head"><div><span class="eyebrow">RGB EYE AUTHENTICATION</span><h2>Verify patient</h2><p>Compare a current eye image with the enrolled RGB profile.</p></div><span class="scan-icon">◎</span></div><form id="verify-form"><label>Patient<select name="patientId" id="patient-select" required><option value="">Select a patient</option></select></label><label class="upload-label">Eye image<input type="file" id="eye-file" accept="image/*" required><span class="upload-drop"><span class="upload-symbol">↑</span><b>Choose an image</b><small>JPG, PNG or WebP · stored only during this check</small></span></label><div class="preview-wrap hidden" id="preview-wrap"><img id="eye-preview" alt="Selected eye image preview"><button id="clear-image" type="button" aria-label="Remove image">×</button></div><button class="primary" type="submit" id="verify-button">Run RGB comparison <span>→</span></button></form><div class="result hidden" id="verify-result" aria-live="polite"></div><div class="method-note"><b>About this check</b><p>RGB similarity is a visual prototype only. It does not identify iris patterns or establish a patient's identity. Confirm identity using your clinic's approved process.</p></div></section></div>
+        </section>
+        <footer><span>© <span id="year"></span> Aster Eye Institute</span><span>Private clinical workspace <i>·</i> Access limited to this hospital</span></footer>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" aria-live="polite"></div>
+  <div class="modal-backdrop" id="report-modal"></div>
+</body></html>
